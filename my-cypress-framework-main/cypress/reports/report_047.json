@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T18:15:47.111Z",
+    "end": "2021-08-08T18:15:59.543Z",
+    "duration": 12432,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a43a1f0-3f53-4a05-b8f3-8cf67aa8615f",
+      "title": "",
+      "fullFile": "cypress/integration/smoke-test/day01_login_test.js",
+      "file": "cypress/integration/smoke-test/day01_login_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a52a4613-2e98-4f96-aa9a-e131f03e0b05",
+          "title": "Crystal Key Hotel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 1",
+              "fullTitle": "Crystal Key Hotel Test 1",
+              "timedOut": null,
+              "duration": 11516,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.koalaresorthotels.com/'); //seleniumdaki get()\n//login\n//1.yol\n//cy.get('#navLogon > .nav-link').click()\n//2.yol\ncy.contains('Log in').click(); //contains() metni text olarak buluyor\n//userername: 'manager'\ncy.get('#UserName').type('Manager'); //driver.findElement(BycssLocator('#UserNam')).sendKeys('Manager')\n//password: 'Manager2!'\ncy.get('#Password').type('Manager1!');\ncy.get('#btnSubmit').click();",
+              "err": {},
+              "uuid": "3e3537fc-d7d4-408b-a07e-a36323ea29fc",
+              "parentUUID": "a52a4613-2e98-4f96-aa9a-e131f03e0b05",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e3537fc-d7d4-408b-a07e-a36323ea29fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

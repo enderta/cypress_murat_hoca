@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T18:15:38.517Z",
+    "end": "2021-08-08T18:15:38.955Z",
+    "duration": 438,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "29569fc3-cf24-4687-87c0-26fdf911b1bb",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day09_XHR2.js",
+      "file": "cypress/integration/com.techproed/day09_XHR2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8f5ed93-e494-428f-b15f-c76679c62a62",
+          "title": "XHR - XML, HTTP, Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "XHR Example 2",
+              "fullTitle": "XHR - XML, HTTP, Request XHR Example 2",
+              "timedOut": null,
+              "duration": 421,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', requestUrl, {\n  userId: 501,\n  title: \"Cypres cok kolay\",\n  body: \"JavaScript daha da kolay\"\n}).then(response => {\n  console.log(response);\n  expect(response.status).to.eq(201);\n  expect(response).property('body').to.contain({\n    title: \"Cypres cok kolay\"\n  });\n  expect(response.body).property('userId').to.be.a('number');\n});",
+              "err": {},
+              "uuid": "a6c744de-64f7-487e-98df-4f59b911860a",
+              "parentUUID": "b8f5ed93-e494-428f-b15f-c76679c62a62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6c744de-64f7-487e-98df-4f59b911860a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 421,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

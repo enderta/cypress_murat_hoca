@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T18:12:33.812Z",
+    "end": "2021-08-08T18:12:41.567Z",
+    "duration": 7755,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "156ab34d-19a4-481d-b92e-c552971468df",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_alerts.js",
+      "file": "cypress/integration/com.techproed/day04_alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07cf1cec-acad-4bb6-870d-3e8a9cb7a395",
+          "title": "allerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "alert test",
+              "fullTitle": "allerts alert test",
+              "timedOut": null,
+              "duration": 1558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Cypress otomatik olarak allert button tiklamalarini onaylar.\ncy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(1) > button').click();\ncy.get('#result').should('have.text', 'You successfully clicked an alert');",
+              "err": {},
+              "uuid": "408a4b7a-7581-4056-8839-98912dd18cd9",
+              "parentUUID": "07cf1cec-acad-4bb6-870d-3e8a9cb7a395",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "accept alert Test",
+              "fullTitle": "allerts accept alert Test",
+              "timedOut": null,
+              "duration": 309,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts'); //2. buttona tikliyoruz (Click for JS Confirm)\n//2 secenek cikiyor. iptal ve tamam\n//cypress otomatik olarak tamam'i kabul ediyor\ncy.get(':nth-child(2) > button').click();\ncy.get('#result').should('have.text', 'You clicked: Ok');",
+              "err": {},
+              "uuid": "e6858bb6-33b8-457d-9b91-777837be2cb4",
+              "parentUUID": "07cf1cec-acad-4bb6-870d-3e8a9cb7a395",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dismiss alert",
+              "fullTitle": "allerts dismiss alert",
+              "timedOut": null,
+              "duration": 311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click(); //cypres otomatik olarak tamam butonuna tikladi\n//ama iptal butonunu secmek istiyoruz\n//browser controlu icin on() funksiyonu kullanacagiz\n//on()-> jquery bir fonksiyondur\n//window(object):confirm(functionality)\ncy.on('window:confirm', str => {\n  return false; //return true -> default olarak tamam tikla demek\n});\ncy.get('#result').should('have.text', 'You clicked: Cancel');",
+              "err": {},
+              "uuid": "ffd5f503-11f0-42a9-bf64-e2bf62c7f138",
+              "parentUUID": "07cf1cec-acad-4bb6-870d-3e8a9cb7a395",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "entering text on the allert",
+              "fullTitle": "allerts entering text on the allert",
+              "timedOut": null,
+              "duration": 4356,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//3. buttom'a tikla (Click for JS Promt)\n//'Hi' yaz. Ok'e tikla\ncy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.window() //pop up pencereleri kontrol ediyoruz\n.then($windowElement => {\n  //$windowElement -> promt'a bilgi girisi\n  cy.stub($windowElement, 'prompt').returns('Hi');\n  cy.wait(4000);\n  cy.get(':nth-child(3) > button').click();\n});\ncy.get('#result').should('have.text', 'You entered: Hi');",
+              "err": {},
+              "uuid": "927a63dd-33b7-49ec-93d1-453d19e826c6",
+              "parentUUID": "07cf1cec-acad-4bb6-870d-3e8a9cb7a395",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "408a4b7a-7581-4056-8839-98912dd18cd9",
+            "e6858bb6-33b8-457d-9b91-777837be2cb4",
+            "ffd5f503-11f0-42a9-bf64-e2bf62c7f138",
+            "927a63dd-33b7-49ec-93d1-453d19e826c6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6534,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

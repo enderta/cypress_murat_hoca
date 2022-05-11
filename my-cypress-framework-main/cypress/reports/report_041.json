@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T18:15:37.013Z",
+    "end": "2021-08-08T18:15:37.633Z",
+    "duration": 620,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fd2013d7-7f44-43bf-be92-9ff061cd7b01",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day09_XHR1.js",
+      "file": "cypress/integration/com.techproed/day09_XHR1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2300b533-46b4-44d8-8613-07b7d83c7ce1",
+          "title": "XHR - XML, HTTP, Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "XHR Example 1",
+              "fullTitle": "XHR - XML, HTTP, Request XHR Example 1",
+              "timedOut": null,
+              "duration": 606,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(requestUrl).should(response => {\n  console.log(response);\n  assert.equal(response.status, 200);\n  expect(response.statusText).to.eq('OK');\n});",
+              "err": {},
+              "uuid": "32cddae7-1483-4506-ada5-7bec477f2e13",
+              "parentUUID": "2300b533-46b4-44d8-8613-07b7d83c7ce1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32cddae7-1483-4506-ada5-7bec477f2e13"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 606,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

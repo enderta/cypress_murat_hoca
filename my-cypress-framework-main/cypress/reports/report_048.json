@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-08T18:16:00.225Z",
+    "end": "2021-08-08T18:16:24.365Z",
+    "duration": 24140,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dc0fc1d9-c280-4933-9b16-0e91a976bac6",
+      "title": "",
+      "fullFile": "cypress/integration/smoke-test/day07_paylinn_login.js",
+      "file": "cypress/integration/smoke-test/day07_paylinn_login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1406d848-533d-4f90-9e85-e5c30a13a4ad",
+          "title": "Paylinn Bank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "paylinn login test",
+              "fullTitle": "Paylinn Bank paylinn login test",
+              "timedOut": null,
+              "duration": 8327,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//URL'e git\ncy.visit('https://www.paylinn.com/'); //Sign In'e click\ncy.contains('Sign In').click(); //username gir\ncy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('User'); //password gir\ncy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('user'); //sign In butonuna tikla\ncy.get('.MuiButton-label').click(); //giris yapildigini onayla\ncy.get('.header__nav > :nth-child(1) > .header__lineOne').should('contain.text', 'Welcoem');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span.header__lineOne>' to contain text 'Welcoem', but the text was 'Welcome'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span.header__lineOne>' to contain text 'Welcoem', but the text was 'Welcome'\n    at Context.eval (https://www.paylinn.com/__cypress/tests?p=cypress/integration/smoke-test/day07_paylinn_login.js:113:63)",
+                "diff": "- 'Welcome'\n+ 'Welcoem'\n"
+              },
+              "uuid": "eb9acb6a-485d-46eb-9f01-0f288f5ae77a",
+              "parentUUID": "1406d848-533d-4f90-9e85-e5c30a13a4ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eb9acb6a-485d-46eb-9f01-0f288f5ae77a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8327,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

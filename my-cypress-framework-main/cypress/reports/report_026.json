@@ -1,0 +1,146 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 2,
+    "failures": -2,
+    "start": "2021-08-08T18:11:52.712Z",
+    "end": "2021-08-08T18:12:06.741Z",
+    "duration": 14029,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 66.66666666666666,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3a1e214c-dfa8-4221-845d-024caa7dc527",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day03_checkboxes.js",
+      "file": "cypress/integration/com.techproed/day03_checkboxes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a028697-2bd8-4df9-990d-ef0b06947ab0",
+          "title": "checkboxes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checking single box",
+              "fullTitle": "checkboxes checking single box",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "e3ae1e14-ab0b-4f53-a323-66c1d21902e4",
+              "parentUUID": "5a028697-2bd8-4df9-990d-ef0b06947ab0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check all checkboxes",
+              "fullTitle": "checkboxes check all checkboxes",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "d06e8196-b45b-465d-8af9-eae8973730d7",
+              "parentUUID": "5a028697-2bd8-4df9-990d-ef0b06947ab0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click",
+              "fullTitle": "checkboxes click",
+              "timedOut": null,
+              "duration": 10591,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('.sf-with-ul').first().click();\ncy.get(\"input[type='checkbox']\").click({\n  multiple: true\n}); //click({ multiple: true }) -> click() tek elemente uygulanır.\n//birden fazla elemente uygulmak icin { multiple: true } kullanilir.\n//Assert\n//1)\ncy.get(\"input[type='checkbox']\").first().should('be.checked'); //2) \ncy.get(\"input[type='checkbox']\").first().parent().should('have.class', 'checked'); //3)should('have.id', 'username')\n//4)should('have.type', 'text')\n//should('have.class', 'container')",
+              "err": {},
+              "uuid": "1fe28c3e-a54b-4328-a3b1-850cd2a1ebad",
+              "parentUUID": "5a028697-2bd8-4df9-990d-ef0b06947ab0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1fe28c3e-a54b-4328-a3b1-850cd2a1ebad"
+          ],
+          "failures": [],
+          "pending": [
+            "e3ae1e14-ab0b-4f53-a323-66c1d21902e4",
+            "d06e8196-b45b-465d-8af9-eae8973730d7"
+          ],
+          "skipped": [],
+          "duration": 10591,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

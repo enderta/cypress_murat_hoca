@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-08T18:10:59.298Z",
+    "end": "2021-08-08T18:11:06.412Z",
+    "duration": 7114,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15800a94-1e90-4356-845b-780dde544e62",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day01_first_test.js",
+      "file": "cypress/integration/com.techproed/day01_first_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65fa2403-a9c9-4dff-b137-d36845bac4aa",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Testi",
+              "fullTitle": "My First Test URL Testi",
+              "timedOut": null,
+              "duration": 1771,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//test'i tanimliyoruz. @Test gibi\n//it('Testin ismi', 'olusturulacak fonksiyonlar')\n//URL adtresinde google var mi?\ncy.visit('https://www.google.com/'); //visit('site adresi') siteye gider\ncy.url().should('include', 'www.google.com'); //url() url testi ici kullanilir.\n//should('iceriyormu', 'xxxxxx')",
+              "err": {},
+              "uuid": "4566dd95-c1da-4f9d-9982-51d20bbe1543",
+              "parentUUID": "65fa2403-a9c9-4dff-b137-d36845bac4aa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Title Test",
+              "fullTitle": "My First Test Title Test",
+              "timedOut": null,
+              "duration": 3966,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Title da Google Var mi?\ncy.visit('https://www.google.com/');\ncy.title().should('eq', 'Google');",
+              "err": {},
+              "uuid": "a341ccdc-31cc-4362-ab0c-bbec83a7ba22",
+              "parentUUID": "65fa2403-a9c9-4dff-b137-d36845bac4aa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4566dd95-c1da-4f9d-9982-51d20bbe1543",
+            "a341ccdc-31cc-4362-ab0c-bbec83a7ba22"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5737,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
